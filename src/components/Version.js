@@ -35,11 +35,7 @@ class Version {
         let WebpackChunkHashPlugin = require('webpack-chunk-hash');
 
         return [
-            new webpack[
-                Mix.inProduction()
-                    ? 'HashedModuleIdsPlugin'
-                    : 'NamedModulesPlugin'
-            ](),
+            new webpack['NamedModulesPlugin'](),
             new WebpackChunkHashPlugin()
         ];
     }
